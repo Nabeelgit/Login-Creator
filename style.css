@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Using Arial for the whole body, but you can choose another font */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px 40px; /* Increased padding for a bigger navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Existing subtle shadow */
+    font-size: 20px; /* Larger font size for better readability */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.left {
+    flex: 1;
+    text-align: left;
+}
+
+.center {
+    flex: 2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px; /* Making the title bigger */
+    font-family: 'Helvetica Neue', sans-serif; /* Using a different font for the title */
+}
+
+.right {
+    flex: 1;
+    text-align: right;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Reduced width for a smaller modal */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Center aligns all text within the modal */
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Adds space between settings */
+    padding: 10px; /* Adds padding around each setting for better spacing */
+}
+
+.checkbox-wrapper-2 {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Ensures checkbox aligns to the right within its container */
+    padding-left: 10px; /* Adds padding to the left of the checkbox to bring it closer to the label */
+}
+
+.modal-content h2 {
+    font-size: 24px; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.modal-content label {
+    font-size: 18px; /* Increased font size for better visibility */
+    font-weight: bold; /* Make the label text bold */
+    margin-right: 10px; /* Adds right margin to the label to bring it closer to the checkbox */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff; /* Apply white text color globally in dark mode */
+}
+.dark-mode .nav-item {
+    color: #fff !important; /* Apply white text color globally in dark mode */
+}
+.dark-mode .navbar {
+    background-color: #555;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.3); /* White box shadow for contrast */
+    text-shadow: 0 0 8px rgba(255,255,255,0.5); /* Glowing white text shadow */
+}
+
+.dark-mode .modal-content {
+    background-color: #222;
+    color: #ccc; /* Specific color for modal content if needed, or remove this line to use global white */
+}
+
+.dark-mode .close {
+    color: #ccc; /* Adjust close button color if needed */
+}
+
+/* Custom Checkbox Styles */
+.checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+}
+
+.checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.checkbox-wrapper-2 .ikxBAC,
+.checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+}
+
+.checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+}
+
+.checkbox-wrapper-2 .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: #6e79d6;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 13px;
+}
+
+.checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: #535db3;
+}
