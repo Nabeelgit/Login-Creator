@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;
+    color: white;    background-color: #1b9b27; /* Updated background color */
     padding: 20px 40px; /* Increased padding for a bigger navbar */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Existing subtle shadow */
     font-size: 20px; /* Larger font size for better readability */
@@ -15,7 +15,7 @@ body {
 
 .nav-item {
     text-decoration: none;
-    color: black;
+    color: white; /* Updated text color to white */
     font-size: 16px;
 }
 
@@ -105,9 +105,6 @@ body {
     background-color: #333;
     color: #fff; /* Apply white text color globally in dark mode */
 }
-.dark-mode .nav-item {
-    color: #fff !important; /* Apply white text color globally in dark mode */
-}
 .dark-mode .navbar {
     background-color: #555;
     box-shadow: 0 2px 4px rgba(255,255,255,0.3); /* White box shadow for contrast */
@@ -185,4 +182,81 @@ body {
 
 .checkbox-wrapper-2 .ikxBAC:checked:hover {
     background-color: #535db3;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps inputs centered */
+    justify-content: center;
+    margin-top: 50px; /* Adjust spacing from the navbar */
+}
+
+.styled-input {
+    width: 400px; /* Increased width for better visibility */
+    height: 40px; /* Reduced height for a sleeker look */
+    margin: 15px 0; /* Increased spacing between inputs */
+    padding: 0 10px; /* Padding inside the input for text */
+    border-radius: 10px; /* Slightly less rounded edges */
+    border: 1px solid #ccc; /* Subtle border */
+    font-size: 16px; /* Larger font size for readability */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+label {
+    font-size: 16px; /* Matching font size for labels and inputs */
+    color: #333; /* Dark color for better readability */
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Ensure the label is on a new line */
+    text-align: left; /* Aligns text to the left */
+    width: 400px; /* Match the width of the inputs */
+}
+
+.submit-button {
+    width: 424px;
+    height: 40px; /* Match the height of the inputs */
+    background-color: #1b9b27; /* Same color as the navbar */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded edges */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    margin-top: 10px; /* Space above the button */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.submit-button:hover {
+    background-color: #159216; /* Slightly darker shade on hover for better UX */
+}
+
+.code-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    height: 300px;
+    background-color: black;
+    color: #00ff00; /* Green text for better visibility */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    overflow: auto; /* Allows scrolling */
+}
+
+.copy-button {
+    background-color: #1b9b27; /* Same color as the navbar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px; /* Space between the title and the button */
+}
+
+.copy-button:hover {
+    background-color: #159216; /* Darker shade for hover effect */
 }

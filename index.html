@@ -12,6 +12,15 @@
         <div class="nav-item center">Login Creator</div>
         <div class="nav-item right" onclick="toggleSettings()" style="cursor: pointer;">Settings</div>
     </nav>
+    <div class="input-container">
+        <label for="websiteName">Name of Website:</label>
+        <input type="text" id="websiteName" placeholder="Name of Website" class="styled-input">
+        
+        <label for="themeColor" style="margin-top: 1rem;">Theme Color (Hex Code):</label>
+        <input type="text" id="themeColor" placeholder="Theme Color (e.g., #1a1a1a)" class="styled-input" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" title="Enter a valid hex color code">
+        <div id="error-message" style="color: red; margin-top: 10px;"></div>
+        <button type="button" class="submit-button">Submit</button>
+    </div>
     <div id="settingsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="toggleSettings()">&times;</span>
@@ -25,6 +34,13 @@
             <!-- Additional settings can be added here in similar div structures -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <div class="code-container">
+        <h3>Login Page Code: <button onclick="copyCode('loginCode')" class="copy-button">Copy Code</button></h3>
+        <textarea id="loginCode" readonly></textarea>
+        
+        <h3>Signup Page Code: <button onclick="copyCode('signupCode')" class="copy-button">Copy Code</button></h3>
+        <textarea id="signupCode" readonly></textarea>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
